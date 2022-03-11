@@ -1,5 +1,9 @@
 document.querySelector('form').addEventListener('submit', event => {
     event.preventDefault()      //to avoid brouser default behavior: sending form data to backend server and refreshing the page which we don't have here
+
+    document.querySelector('#msg-form').classList.add('hide')
+    document.querySelector('#link-form').classList.remove('hide')
+
     const msgInput = document.querySelector('#msg-input')
     const encrypted = btoa(msgInput.value)
 
